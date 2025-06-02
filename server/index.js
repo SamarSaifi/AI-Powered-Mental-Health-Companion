@@ -19,6 +19,11 @@ const io = new Server(httpServer, {
   }
 });
 
+// Simple route to test server is up
+app.get('/', (req, res) => {
+  res.send('Socket.IO server is running.');
+});
+
 // Track users in each room
 const rooms = {
   general: new Set(),
